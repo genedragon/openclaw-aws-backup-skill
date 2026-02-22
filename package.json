@@ -1,0 +1,44 @@
+{
+  "name": "openclaw-aws-backup-skill",
+  "version": "2.0.0",
+  "description": "Secure AWS backup and restore for OpenClaw instances with S3 storage and optional KMS encryption",
+  "keywords": [
+    "openclaw",
+    "backup",
+    "restore",
+    "s3",
+    "kms",
+    "encryption",
+    "disaster-recovery",
+    "aws"
+  ],
+  "homepage": "https://github.com/genedragon/openclaw-aws-backup-skill#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/genedragon/openclaw-aws-backup-skill.git"
+  },
+  "bugs": {
+    "url": "https://github.com/genedragon/openclaw-aws-backup-skill/issues"
+  },
+  "license": "MIT",
+  "author": "OpenClaw Backup Skill Contributors",
+  "bin": {
+    "openclaw-aws-backup": "./bin/openclaw-aws-backup.js"
+  },
+  "scripts": {
+    "setup": "node bin/setup.js",
+    "backup": "node bin/backup-create.js",
+    "restore": "node bin/backup-restore.js",
+    "test": "node bin/backup-test.js"
+  },
+  "dependencies": {
+    "@aws-sdk/client-kms": "^3.0.0",
+    "@aws-sdk/client-s3": "^3.0.0",
+    "chalk": "^4.1.2",
+    "commander": "^11.0.0",
+    "inquirer": "^9.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
